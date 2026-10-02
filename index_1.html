@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jane Gordon</title>
+<meta name="description" content="Jane Gordon is a political science student at McGill University working in health policy, global health security, and corporate strategy.">
+<meta property="og:title" content="Jane Gordon">
+<meta property="og:description" content="Health policy research, global health security writing, and corporate strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: single narrow column; each section is a two-column row (label left, content right) that stacks on phones. */
+:root {
+  --bg: #ffffff;
+  --fg: #1d1718;
+  --muted: #6e6466;
+  --line: #e9e3e4;
+  --accent: #7a1f34;
+  --accent-soft: #f7eef0;
+  --font: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151112;
+    --fg: #f1ebec;
+    --muted: #a3999b;
+    --line: #2e2729;
+    --accent: #e08a9c;
+    --accent-soft: #261a1d;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding-inline: 24px; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+header.top {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;
+  gap: 8px 24px; padding-block: 28px;
+}
+.name-mark { font-weight: 700; text-decoration: none; letter-spacing: -0.01em; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 15px; }
+nav a { text-decoration: none; color: var(--muted); }
+nav a:hover { color: var(--accent); }
+
+.hero { padding-block: 56px 72px; }
+.hero h1 {
+  font-size: clamp(2.5rem, 7vw, 4.25rem); line-height: 1.02; letter-spacing: -0.035em;
+  font-weight: 700; margin: 0 0 24px; text-wrap: balance;
+}
+.hero h1 span { color: var(--accent); }
+.hero p { font-size: 1.2rem; max-width: 34em; margin: 0 0 32px; color: var(--muted); }
+.hero p strong { color: var(--fg); font-weight: 500; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-block; padding: 11px 20px; border: 1px solid var(--accent);
+  text-decoration: none; font-weight: 600; font-size: 15px; border-radius: 2px;
+}
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn.primary:hover { color: var(--bg); opacity: 0.88; }
+.btn.ghost { color: var(--accent); }
+.btn.ghost:hover { background: var(--accent-soft); }
+
+section.row {
+  display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 16px 40px;
+  padding-block: 48px; border-top: 1px solid var(--line);
+}
+section.row > h2 {
+  margin: 4px 0 0; font-size: 13px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--accent);
+}
+.body > p { margin: 0 0 16px; max-width: 36em; }
+.body > p:last-child { margin-bottom: 0; }
+
+.items { display: grid; gap: 36px; list-style: none; margin: 0; padding: 0; }
+.item h3 { margin: 0; font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
+.meta { color: var(--muted); font-size: 15px; margin: 2px 0 10px; font-variant-numeric: tabular-nums; }
+.item ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.item li::marker { color: var(--accent); }
+
+.writing { display: grid; list-style: none; margin: 0; padding: 0; }
+.writing li { border-bottom: 1px solid var(--line); }
+.writing li:first-child { border-top: 1px solid var(--line); }
+.writing a { display: block; padding: 16px 0; text-decoration: none; }
+.writing .title { font-weight: 600; display: block; text-wrap: balance; }
+.writing a:hover .title { text-decoration: underline; text-decoration-color: var(--accent); }
+.writing .meta { margin: 4px 0 0; display: block; }
+
+.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.plain li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 24px; }
+.plain .meta { margin: 0; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 20px 0 0; }
+.tags li { background: var(--accent-soft); color: var(--accent); font-size: 14px; font-weight: 500; padding: 4px 12px; border-radius: 2px; }
+
+.contact a.big { font-size: clamp(1.25rem, 4vw, 1.75rem); font-weight: 600; letter-spacing: -0.02em; overflow-wrap: anywhere; }
+.contact p { margin: 0 0 8px; }
+
+footer { border-top: 1px solid var(--line); padding-block: 28px 48px; color: var(--muted); font-size: 14px; }
+
+@media (max-width: 640px) {
+  section.row { grid-template-columns: 1fr; padding-block: 36px; }
+  .hero { padding-block: 32px 48px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="name-mark" href="#top">Jane Gordon</a>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#writing">Writing</a>
+    <a href="#volunteer">Volunteering</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <h1>Health policy, global security, and <span>strategy</span>.</h1>
+    <p><strong>Jane Gordon</strong> is a political science student at McGill University. She researches and writes about healthcare policy, global health security, and the role of AI in both.</p>
+    <div class="actions">
+      <a class="btn primary" href="resume.pdf" download="Jane-Gordon-Resume.pdf">Download resume</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+
+  <section class="row" id="about">
+    <h2>About</h2>
+    <div class="body">
+      <p>I'm in my final year of a BA at McGill, majoring in political science with minors in history and economics. My work sits where health policy meets technology and international affairs.</p>
+      <p>I'm currently a Corporate Strategy Intern at Dialogue Health Technologies and a Junior Research Fellow with the NATO Association of Canada's Global Health and Security Program. Before that, I researched Canadian healthcare policy at SecondStreet.org and was one of six students across Canada selected as a Summer Fellow at the Institute for Liberal Studies.</p>
+      <p>Outside of work and school, I lead partnerships and outreach for student organizations and volunteer at a women's shelter in Montreal.</p>
+      <ul class="tags">
+        <li>Health policy</li>
+        <li>Global health security</li>
+        <li>AI and digital health</li>
+        <li>Market research</li>
+        <li>Policy writing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="row" id="experience">
+    <h2>Experience</h2>
+    <ol class="items body">
+      <li class="item">
+        <h3>Corporate Strategy Intern</h3>
+        <p class="meta">Dialogue Health Technologies · June 2026 – Present</p>
+        <ul>
+          <li>Conducted extensive market research and built a functional market sizing model.</li>
+          <li>Developed and evaluated strategic growth opportunities, particularly in AI innovation and automation.</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h3>Junior Research Fellow</h3>
+        <p class="meta">NATO Association of Canada · Remote · February 2026 – Present</p>
+        <ul>
+          <li>Research and write analytical articles for the Global Health and Security Program on how emerging infectious diseases, digital health systems, and AI-driven technologies shape global stability and international preparedness.</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h3>Policy Research Intern</h3>
+        <p class="meta">SecondStreet.org · Vancouver, BC · May – October 2025</p>
+        <ul>
+          <li>Spearheaded a research project on Debbie's Law, Manitoba's 2025 healthcare transparency law, culminating in my first published op-ed.</li>
+          <li>Managed patientsoptions.ca, which provides information on alternative healthcare options in Canada and abroad.</li>
+          <li>Supported the educational initiative parentoptions.ca with up-to-date data on schooling options in Canada.</li>
+        </ul>
+      </li>
+      <li class="item">
+        <h3>Summer Fellow</h3>
+        <p class="meta">Institute for Liberal Studies · Remote · June – August 2025</p>
+        <ul>
+          <li>Selected as one of six students across Canada for a fellowship for young people pursuing public policy.</li>
+          <li>Took part in weekly reading seminars on classical liberal thinkers including F.A. Hayek, Isaiah Berlin, and Benjamin Constant.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section class="row" id="writing">
+    <h2>Writing</h2>
+    <ul class="writing body">
+      <li><a href="https://natoassociation.ca/what-does-global-antibiotic-resistance-really-mean-and-how-will-it-affect-us/" target="_blank" rel="noopener">
+        <span class="title">What Does Global Antibiotic Resistance Really Mean? And How Will It Affect Us?</span>
+        <span class="meta">NATO Association of Canada · July 2026</span></a></li>
+      <li><a href="https://natoassociation.ca/79th-world-health-assembly-what-happened-and-what-does-it-mean-for-canada/" target="_blank" rel="noopener">
+        <span class="title">79th World Health Assembly: What Happened? And What Does It Mean for Canada?</span>
+        <span class="meta">NATO Association of Canada · July 2026</span></a></li>
+      <li><a href="https://natoassociation.ca/canadas-need-for-binding-ai-legislation-amidst-outsourcing-of-canadians-health-data/" target="_blank" rel="noopener">
+        <span class="title">Canada's Need for Binding AI Legislation Amidst Outsourcing of Canadians' Health Data</span>
+        <span class="meta">NATO Association of Canada · May 2026</span></a></li>
+      <li><a href="https://secondstreet.org/2025/09/16/canada-needs-to-get-serious-about-preventing-illness-heres-how-other-countries-are-doing-it/" target="_blank" rel="noopener">
+        <span class="title">Canada Needs to Get Serious About Preventing Illness. Here's How Other Countries Are Doing It</span>
+        <span class="meta">SecondStreet.org · September 2025</span></a></li>
+      <li><a href="https://secondstreet.org/2025/08/13/lessons-for-canada-preventative-health-in-wolverhampton-united-kingdom/" target="_blank" rel="noopener">
+        <span class="title">Lessons for Canada: Preventative Health in Wolverhampton, United Kingdom</span>
+        <span class="meta">SecondStreet.org · August 2025</span></a></li>
+    </ul>
+  </section>
+
+  <section class="row" id="education">
+    <h2>Education</h2>
+    <div class="body">
+      <div class="item">
+        <h3>McGill University, Bachelor of Arts</h3>
+        <p class="meta">Expected graduation 2027</p>
+        <p style="margin:0 0 20px">Political Science major, with minors in History and Economics.</p>
+      </div>
+      <ul class="plain">
+        <li><span>Director of Partnerships</span><span class="meta">Kodera Canada</span></li>
+        <li><span>Partnership Coordinator</span><span class="meta">Nourish McGill</span></li>
+        <li><span>Outreach Coordinator</span><span class="meta">Borderless World Volunteers</span></li>
+        <li><span>Member</span><span class="meta">McGill Women in Leadership</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="row" id="volunteer">
+    <h2>Volunteering</h2>
+    <ul class="plain body">
+      <li><span>Logifem Women's Shelter</span><span class="meta">Sept 2025 – Present</span></li>
+      <li><span>Resilience Shelter Montreal</span><span class="meta">Sept 2024 – May 2025</span></li>
+      <li><span>Open Door Shelter Montreal</span><span class="meta">Sept – Dec 2024</span></li>
+      <li><span>VOKRA Animal Shelter</span><span class="meta">May 2020 – Aug 2023</span></li>
+      <li><span>Tapestry Senior Living and Bradden Private Hospital</span><span class="meta">Sept 2018 – July 2023</span></li>
+    </ul>
+  </section>
+
+  <section class="row contact" id="contact">
+    <h2>Contact</h2>
+    <div class="body">
+      <p><a class="big" href="mailto:janegordon05@gmail.com">janegordon05@gmail.com</a></p>
+      <p><a href="tel:+16045181893">604-518-1893</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Jane Gordon</footer>
+</div>
+</body>
+</html>
